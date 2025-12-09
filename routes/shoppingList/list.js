@@ -1,15 +1,19 @@
 const express = require("express");
 const router = express.Router();
+const ShoppingList = require("../../models/shopping");
 
-router.get("/", (req, res) => {
-  const dtoOut = {
-    shoppingLists: [
-      { id: "1", name: "Seznam Lidl", owner: "Alice", archived: false },
-      { id: "2", name: "Seznam Tesco", owner: "Bob", archived: false }
-    ],
-    uuAppErrorMap: {}
-  };
-  res.json(dtoOut);
+// Získání všech seznamů
+router.get("/", async (req, res) => {
+  try {
+    const shoppingLists = await ShoppingList.find();  
+    res.json({ shoppingLists, uuAppErrorMap: {} });
+  } catch (err) {
+    res.status(500).json({
+      error: "Chyba serveru",
+      details: err.toString()
+    });
+  }
 });
 
 module.exports = router;
+
