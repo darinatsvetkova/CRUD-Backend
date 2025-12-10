@@ -18,7 +18,7 @@ router.delete("/", async (req, res) => {
       return res.status(404).json({ error: "Seznam nenalezen" });
     }
 
-    await shoppingList.remove();  
+    await shoppingList.deleteOne();
 
     res.json({ message: "Seznam odstraněn", uuAppErrorMap: {} });
 
