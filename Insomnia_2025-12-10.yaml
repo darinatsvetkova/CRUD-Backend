@@ -1,0 +1,401 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: shoppingList
+meta:
+  id: wrk_9998f114741b438d82dc6223fb5c302b
+  created: 1765300375981
+  modified: 1765359535842
+  description: ""
+collection:
+  - url: " http://localhost:3001/shoppingList/create"
+    name: shoppingList/create
+    meta:
+      id: req_cfcf59fa23b64ebda9474288c81c16b6
+      created: 1765300375991
+      modified: 1765355631341
+      isPrivate: false
+      description: ""
+      sortKey: -1765300375992
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "name": "Seznam Lidl",
+          "owner": "Alice"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/shoppingList/get/69392c91b7763ef32e32344d
+    name: shoppingList/get
+    meta:
+      id: req_4845eb7c13764f97a191809478bcabaf
+      created: 1765355446142
+      modified: 1765355507580
+      isPrivate: false
+      description: ""
+      sortKey: -1765355446142
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/shoppingList/list
+    name: shoppingList/list
+    meta:
+      id: req_cbe3914557824b6e8d18b891a94b4e46
+      created: 1765355686339
+      modified: 1765355725769
+      isPrivate: false
+      description: ""
+      sortKey: -1765355686339
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/shoppingList/update
+    name: shoppingList/update
+    meta:
+      id: req_bbea08cd7ce04ace9ccbad79d7817e17
+      created: 1765355760688
+      modified: 1765355823556
+      isPrivate: false
+      description: ""
+      sortKey: -1765355760688
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "id": "69392c91b7763ef32e32344d",
+          "name": "Seznam Albert"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/shoppingList/delete
+    name: shoppingList/delete
+    meta:
+      id: req_5e44556b840d47f7a6540db27f48c869
+      created: 1765355891145
+      modified: 1765355924341
+      isPrivate: false
+      description: ""
+      sortKey: -1765355891145
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "id": "69392c91b7763ef32e32344d"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/membership/add
+    name: membership/add
+    meta:
+      id: req_6c2d0f5a5b134b6d90abd924a306c80e
+      created: 1765356020092
+      modified: 1765356053857
+      isPrivate: false
+      description: ""
+      sortKey: -1765356020092
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "listId": "69386425a03bd15745e825f2",
+          "user": "Bob"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/membership/remove
+    name: membership/leave
+    meta:
+      id: req_f6faa25a41f74051a2ca82b8f0df3b5e
+      created: 1765356110374
+      modified: 1765356148481
+      isPrivate: false
+      description: ""
+      sortKey: -1765356110374
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "listId": "69386425a03bd15745e825f2",
+          "user": "Bob"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/membership/list/69386425a03bd15745e825f2
+    name: membership/list
+    meta:
+      id: req_331e2c3a1ae14564a03bf3905919fb62
+      created: 1765356181611
+      modified: 1765356278172
+      isPrivate: false
+      description: ""
+      sortKey: -1765356181611
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/membership/remove
+    name: membership/remove
+    meta:
+      id: req_3e9052473ec14679bdbdf4232a66021c
+      created: 1765356334770
+      modified: 1765356368356
+      isPrivate: false
+      description: ""
+      sortKey: -1765356334770
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "listId": "69386425a03bd15745e825f2",
+          "user": "Alice"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/item/add
+    name: item/add
+    meta:
+      id: req_c9187e13e6524499baa5bf0037da1a17
+      created: 1765356419219
+      modified: 1765356439413
+      isPrivate: false
+      description: ""
+      sortKey: -1765356419219
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "listId": "69386425a03bd15745e825f2",
+          "name": "Mléko"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/item/complete
+    name: item/complete
+    meta:
+      id: req_e2db7f57bc5c4527b0f62bbcfe295ea7
+      created: 1765356456464
+      modified: 1765357172820
+      isPrivate: false
+      description: ""
+      sortKey: -1765356456464
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "listId": "69386425a03bd15745e825f2",
+          "itemId": "69393398c8fad0c626941311"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/item/delete
+    name: item/delete
+    meta:
+      id: req_449f1379b57f4396b58dd48818ddd26c
+      created: 1765357284381
+      modified: 1765357330255
+      isPrivate: false
+      description: ""
+      sortKey: -1765357284381
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "listId": "69386425a03bd15745e825f2",
+          "itemId": "<id nové položky>"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3001/item/list/69386425a03bd15745e825f2
+    name: item/list
+    meta:
+      id: req_077493c95ae34041b906e9240fc8135e
+      created: 1765358022134
+      modified: 1765359457761
+      isPrivate: false
+      description: ""
+      sortKey: -1765358022134
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_91aadf8e0094aabfeb3251fd28e2319a44653ab7
+    created: 1765300375985
+    modified: 1765300375985
+environments:
+  name: Base Environment
+  meta:
+    id: env_91aadf8e0094aabfeb3251fd28e2319a44653ab7
+    created: 1765300375984
+    modified: 1765300375984
+    isPrivate: false
